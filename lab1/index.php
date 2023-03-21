@@ -34,10 +34,16 @@ if(!empty($_POST["password"]))
 if(!empty($_POST["dep"]))
 {echo "<br>departement: ".$_POST["dep"];}
 
+if($_POST["code"] != "Ysj34\$M" || empty($_POST["code"])){
+//header("Location: http://localhost/lab1");
+echo '<script>alert("Enter valid code!")</script>';
+}
+
 }
 
 elseif(!empty($_POST["reset"])){
     header("Location: http://localhost/lab1");
 }
+
 
 ?>
