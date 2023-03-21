@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-if($_POST["sub"] == "submit"){
+if(!empty($_POST["sub"])){
     if($_POST["gender"] == "male"){
     echo "Thanks Mr ".$_POST["fname"]." ".$_POST["lname"];
     }
@@ -36,8 +36,8 @@ if(!empty($_POST["dep"]))
 
 }
 
-elseif($_POST["reset"] == "reset"){
-    header("Location: http://localhost/lab1/");
+elseif(!empty($_POST["reset"])){
+    header("Location: http://localhost/lab1");
 }
 
 ?>
