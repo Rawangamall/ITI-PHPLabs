@@ -53,11 +53,6 @@ if(!empty($_POST["dep"]))
 {$dep = $_POST["dep"];}
 
 
-// if($_POST["code"] != "Ysj34\$M" || empty($_POST["code"])){
-// //header("Location: http://localhost/lab2");
-// //echo '<script>alert("Enter valid code!")</script>';
-// }
-
 $formerrors=json_encode($errors);
 
 if($errors){
@@ -73,7 +68,7 @@ if($errors){
 }
 
 if(!$errors) {
-//$fullname = $fname.$lname;
+
 @$user_info  ="{$id}:{$fname}:{$lname}:{$address}:{$skillValue}:{$username}:{$password}:{$dep}";
 # save the data to file
    try{
