@@ -1,3 +1,12 @@
+<?php
+
+    if($_GET){
+        $errors = json_decode($_GET['errors']);
+        $errors = (array) $errors;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,15 +40,17 @@
       </head>
     <body>
       <div class="container">
-        <form action="index.php" method="post" style="margin: auto;">
+        <form action="formData.php" method="post" style="margin: auto;">
             <div class="form-row">
               <div class="form-group col-lg-6">
                 <label for="inputEmail4">First Name</label>
                 <input type="text" class="form-control" name="fname" placeholder="First Name">
+                <div class="text-danger"> <?php  if(isset($errors['fname']))  echo $errors['fname']; ?></div>
               </div>
               <div class="form-group col-lg-6">
                 <label for="inputPassword4">Last Name</label>
                 <input type="text" class="form-control" name="lname" placeholder="Last Name">
+                <div class="text-danger"> <?php  if(isset($errors['lname']))  echo $errors['lname']; ?></div>
               </div>
             </div>
             <div class="form-group col-lg-6">
@@ -99,10 +110,12 @@
                   <label >Username</label>
                   <input type="text" class="form-control" name="username" placeholder="userame">
                 </div>
+                <div class="text-danger"> <?php  if(isset($errors['username']))  echo $errors['username']; ?></div>
                 <div class="form-group col-lg-6">
                   <label >Password</label>
                   <input type="password" class="form-control" name="password" placeholder="password">
                 </div>
+                <div class="text-danger"> <?php  if(isset($errors['password']))  echo $errors['password']; ?></div>
                 <div class="form-group col-lg-6">
                     <label >Departement</label>
                     <input type="text" class="form-control" name="dep" placeholder="Departement">
