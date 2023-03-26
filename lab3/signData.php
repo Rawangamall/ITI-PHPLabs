@@ -62,7 +62,7 @@ $formerrors=json_encode($errors);
 
 if($errors){
     var_dump($formerrors);
-    $redirect_url = "Location:http://localhost/lab3/signup.php?errors={$formerrors}";
+    $redirect_url = "Location:signup.php?errors={$formerrors}";
     if ($formvalues){
         $oldvalues = json_encode($formvalues);
       $redirect_url .="&old={$oldvalues}" ;
@@ -78,15 +78,15 @@ if(!$errors){
      fwrite($filehandler, $user_info.PHP_EOL);
      fclose($filehandler);
 
-     header("Location: http://localhost/lab3/login.php");
+     header("Location:login.php");
 
     }catch(Exception $e){
        var_dump($e);
     }
 
 }
-elseif($_POST["rsest"]){
-    header("Location: http://localhost/lab3/signup.php");
+elseif($_POST["reset"]){
+    header("Location:signup.php");
 }
 
 }

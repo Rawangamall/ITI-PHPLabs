@@ -26,18 +26,18 @@ if(!empty($_POST["email"]) && !empty($_POST["password"])){
             break;
         }
     }
-    
+
     session_start();
 
 if($user_exist){
     $_SESSION["name"]= $name;
- header("Location: http://localhost/lab3/welcome.php");
+ header("Location:welcome.php");
 
 }else{$errors["data"]="User NotFound, Login again!";}
 
 $formerrors=json_encode($errors);
 if($errors){
-   $redirect_url = "Location:http://localhost/lab3/login.php?errors={$formerrors}";
+   $redirect_url = "Location:login.php?errors={$formerrors}";
     if ($formvalues){
         $oldvalues = json_encode($formvalues);
         $redirect_url .="&old={$oldvalues}" ;

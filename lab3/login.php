@@ -51,7 +51,7 @@
         <form action="loginData.php" method="post" style="margin:auto;">
           <label id="sign">Cafeteria</label>
             <div class="form-row">
-              <div class="form-group col-lg-10">
+              <div class="form-group col-lg-12">
               <div class="input-group mt-2">
                 <span class="input-group-prepend input-group-text">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -59,26 +59,26 @@
                     <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
                     </svg>
                 </span>
-                <input type="email" class="form-control" name="email" placeholder="email">
+                <input type="email" class="form-control" name="email" placeholder="Enter your email">
                 <div class="text-danger"> <?php  if(isset($errors['email']))  echo $errors['email']; ?></div>
               </div>
                 </div>
               </div>
               <div class="form-row">
-              <div class="form-group col-lg-10">
+              <div class="form-group col-lg-12">
               <div class="input-group mt-2">
             <span class="input-group-prepend input-group-text">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-lock" viewBox="0 0 16 16">
                 <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5v-1a1.9 1.9 0 0 1 .01-.2 4.49 4.49 0 0 1 1.534-3.693C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm7 0a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
                 </svg>
             </span>
-           <input type="password" class="form-control" name="password" placeholder="password" required/>
+           <input type="password" class="form-control" name="password" placeholder="Enter your password" required/>
                 <div class="text-danger"> <?php  if(isset($errors["password"]))  echo $errors["password"]; ?></div>
               </div> 
                 </div>
             </div>
               <div >
-            <button type="submit" name="sub" value="submit" class="btn btn-info">Cafeteria Login</button>
+            <button type="submit" name="sub" value="submit" class="btn btn-light">Cafeteria Login</button>
               </div>
               <div class="text-danger"><?php  if(isset($errors['data']))  echo $errors['data']; ?></div>
           </form>
